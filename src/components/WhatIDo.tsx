@@ -96,7 +96,6 @@ const WhatIDo = () => {
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">React.js</div>
-                <div className="what-tags">Angular</div>
                 <div className="what-tags">Next.js</div>
                 <div className="what-tags">TypeScript</div>
                 <div className="what-tags">JavaScript</div>
@@ -135,7 +134,6 @@ const WhatIDo = () => {
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
                 <div className="what-tags">Express.js</div>
                 <div className="what-tags">MongoDB</div>
                 <div className="what-tags">PostgreSQL</div>
