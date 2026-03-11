@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { isWebGLAvailable } from "../utils/webgl";
 import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
 import {
@@ -125,6 +126,7 @@ function Pointer({ vec = new THREE.Vector3(), isActive }: PointerProps) {
 }
 
 const TechStack = () => {
+  const [webGLSupported] = useState(isWebGLAvailable);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -165,6 +167,14 @@ const TechStack = () => {
         })
     );
   }, []);
+
+  if (!webGLSupported) {
+    return (
+      <div className="techstack">
+        <h2> My Techstack</h2>
+      </div>
+    );
+  }
 
   return (
     <div className="techstack">

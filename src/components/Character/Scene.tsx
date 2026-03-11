@@ -12,15 +12,21 @@ import {
 } from "./utils/mouseUtils";
 import setAnimations from "./utils/animationUtils";
 import { setProgress } from "../Loading";
+import { isWebGLAvailable } from "../../utils/webgl";
 
 const Scene = () => {
   const canvasDiv = useRef<HTMLDivElement | null>(null);
   const hoverDivRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef(new THREE.Scene());
   const { setLoading } = useLoading();
+  const [webGLSupported] = useState(isWebGLAvailable);
 
   const [character, setChar] = useState<THREE.Object3D | null>(null);
   useEffect(() => {
+    if (!webGLSupported) {
+      setLoading(false);
+      return;
+    }
     if (canvasDiv.current) {
       let rect = canvasDiv.current.getBoundingClientRect();
       let container = { width: rect.width, height: rect.height };
@@ -144,6 +150,10 @@ const Scene = () => {
       };
     }
   }, []);
+
+  if (!webGLSupported) {
+    return null;
+  }
 
   return (
     <>
