@@ -5,16 +5,16 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: `${import.meta.env.BASE_URL}images/Solidx.png`,
+    title: "Hire Helper",
+    category: "Temporary Helper Platform",
+    tools: "Express, React.js, Node.js, MongoDB",
+    image: `https://res.cloudinary.com/doxmvuss9/image/upload/v1773488623/link-generator/c89ossezyqzaffs8pnqe.png`,
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: `${import.meta.env.BASE_URL}images/radix.png`,
+    title: "Uber",
+    category: "E-TAXI Booking Platform",
+    tools: "React.js, Express.js, Node.js, Websocket, Google Maps API",
+    image: `https://res.cloudinary.com/doxmvuss9/image/upload/v1773489207/link-generator/ry6s8cabd6hizrbxo1fx.png`,
   },
   {
     title: "Bond Cancellation",
